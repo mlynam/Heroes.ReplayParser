@@ -3,7 +3,7 @@ FROM microsoft/aspnetcore-build AS builder
 WORKDIR /source
 
 # caches restore result by copying csproj file separately
-COPY */**.csproj .
+COPY *.sln .
 RUN dotnet restore
 
 # copies the rest of your code
