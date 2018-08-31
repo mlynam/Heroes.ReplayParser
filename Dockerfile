@@ -1,9 +1,9 @@
 # Stage 1
 FROM microsoft/aspnetcore-build AS builder
-WORKDIR /source
+WORKDIR /source/
 
 # caches restore result by copying csproj file separately
-COPY *.sln .
+COPY **/*.csproj .
 RUN dotnet restore
 
 # copies the rest of your code
