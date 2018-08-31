@@ -4,17 +4,15 @@ stages:
   - deploy
 
 variables:
-  project: "Heroes.ReplayParser"
+  parser: "Heroes.ReplayParser"
+  mpq: "MpqTool"
 
 before_script:
   - "dotnet restore"
 
 build:
   stage: deploy
-  variables:
-    build_path: "$project"
   script:
-    - "cd $build_path"
-    - "dotnet build Heroes.ReplayParser.netstandard.csproj"
-    - "dotnet pack Heroes.ReplayParser.netstandard.csproj"
+    - "dotnet pack $parser/Heroes.ReplayParser.netstandard.csproj"
+    - "dotnet pack $mpq/MpqTool.netstandard.csproj"
     - "dotnet nuget push **/*.nupkg --source=https://api.nuget.org/v3/index.json --api-key=$nuget_api_key"
