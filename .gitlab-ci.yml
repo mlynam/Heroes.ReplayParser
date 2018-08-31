@@ -1,7 +1,6 @@
 image: microsoft/dotnet:latest
 
 stages:
-  - build
   - deploy
 
 variables:
@@ -11,18 +10,11 @@ before_script:
   - "dotnet restore"
 
 build:
-  stage: build
+  stage: deploy
   variables:
     build_path: "$project"
   script:
     - "cd $build_path"
     - "dotnet build Heroes.ReplayParser.netstandard.csproj"
     - "dotnet pack Heroes.ReplayParser.netstandard.csproj"
-
-deploy:
-  stage: deploy
-  variables:
-    build_path: "$project"
-  script:
-    - "cd $build_path"
     - "dotnet nuget push **/*.nupkg --api-key=$nuget_api_key"
