@@ -17,4 +17,4 @@ build:
     - "cd $build_path"
     - "dotnet build Heroes.ReplayParser.netstandard.csproj"
     - "dotnet pack Heroes.ReplayParser.netstandard.csproj"
-    - "dotnet nuget push **/*.nupkg --api-key=$nuget_api_key"
+    - "dotnet nuget push bin/Debug/$project.netstandard.1.0.0.nupkg --api-key=$nuget_api_key"
