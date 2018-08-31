@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Heroes.ReplayParser.netstandard", "Heroes.ReplayParser\Heroes.ReplayParser.netstandard.csproj", "{AA4306C0-4ABB-4126-942C-B539553DDFC4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MpqTool.netstandard", "MpqTool\MpqTool.netstandard.csproj", "{910916B7-497B-4F66-BD31-639792CD2638}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2F9C13A4-0A61-4FAE-A695-80F8F2F92BBF}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		.gitlab-ci.yml = .gitlab-ci.yml
+		Dockerfile = Dockerfile
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA4306C0-4ABB-4126-942C-B539553DDFC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA4306C0-4ABB-4126-942C-B539553DDFC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA4306C0-4ABB-4126-942C-B539553DDFC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA4306C0-4ABB-4126-942C-B539553DDFC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{910916B7-497B-4F66-BD31-639792CD2638}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{910916B7-497B-4F66-BD31-639792CD2638}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{910916B7-497B-4F66-BD31-639792CD2638}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{910916B7-497B-4F66-BD31-639792CD2638}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6191C026-18F7-4D66-A9F5-389490797709}
+	EndGlobalSection
+EndGlobal
