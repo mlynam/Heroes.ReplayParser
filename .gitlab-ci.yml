@@ -1,16 +1,18 @@
-image: docker:latest
-
-variables:
-  DOCKER_DRIVER: overlay
-  CONTAINER_TEST_IMAGE: mdymel/aspdocker:$CI_BUILD_REF_NAME
-
-services:
-- docker:dind
+image: microsoft/dotnet:latest
 
 stages:
-- build
+  - build
+
+variables:
+  project: "Heroes.ReplayParser"
+
+before_script:
+  - "dotnet restore"
 
 build:
   stage: build
+  variables:
+    build_path: "$project"
   script:
-  - docker build -t $CONTAINER_TEST_IMAGE .
+    - "cd $build_path"
+    - "dotnet build"
